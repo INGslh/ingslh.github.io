@@ -95,13 +95,24 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="INGslh&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="翻译：GNU Radio下的Python编程原文地址目标 Python模块 使用面向对象的模块制作实际的应用程序/函数 怎样田间面向对象模块 怎样添加带有gr_modtool的Python模块，以及怎样对它们编程 QPSK绘图 怎样对模块田间GRC绑定  预备知识 安装GNU Radio3.7.4或更新的版本 已学习GRC教程 对Python有一定了解  3.1介绍Python编写GNURadio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="翻译：GNU Radio下的Python编程">
+<meta property="og:url" content="http://yoursite.com/2017/10/20/翻译GNU radio教程：GNUradio的Python编程/index.html">
 <meta property="og:site_name" content="INGslh&#39;s blog">
+<meta property="og:description" content="翻译：GNU Radio下的Python编程原文地址目标 Python模块 使用面向对象的模块制作实际的应用程序/函数 怎样田间面向对象模块 怎样添加带有gr_modtool的Python模块，以及怎样对它们编程 QPSK绘图 怎样对模块田间GRC绑定  预备知识 安装GNU Radio3.7.4或更新的版本 已学习GRC教程 对Python有一定了解  3.1介绍Python编写GNURadio">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/tutorial_three_1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_search.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_source.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_waveform.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_sink.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_sink_detail.png">
+<meta property="og:updated_time" content="2017-10-23T06:15:33.902Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="INGslh&#39;s blog">
+<meta name="twitter:title" content="翻译：GNU Radio下的Python编程">
+<meta name="twitter:description" content="翻译：GNU Radio下的Python编程原文地址目标 Python模块 使用面向对象的模块制作实际的应用程序/函数 怎样田间面向对象模块 怎样添加带有gr_modtool的Python模块，以及怎样对它们编程 QPSK绘图 怎样对模块田间GRC绑定  预备知识 安装GNU Radio3.7.4或更新的版本 已学习GRC教程 对Python有一定了解  3.1介绍Python编写GNURadio">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/tutorial_three_1.png">
 
 
 
@@ -131,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/20/翻译GNU radio教程：GNUradio的Python编程/"/>
 
 
 
 
 
-  <title>INGslh's blog</title>
+  <title>翻译：GNU Radio下的Python编程 | INGslh's blog</title>
   
 
 
@@ -156,8 +167,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,9 +240,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -262,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/20/翻译GNU radio教程：GNUradio的Python编程/" itemprop="url">翻译：GNU Radio下的Python编程</a></h1>
+          <h1 class="post-title" itemprop="name headline">翻译：GNU Radio下的Python编程</h1>
         
 
         <div class="post-meta">
@@ -314,9 +322,7 @@
       
 
       
-        
-          
-            <h2 id="翻译：GNU-Radio下的Python编程"><a href="#翻译：GNU-Radio下的Python编程" class="headerlink" title="翻译：GNU Radio下的Python编程"></a>翻译：GNU Radio下的Python编程</h2><h3 id="原文地址"><a href="#原文地址" class="headerlink" title="原文地址"></a><a href="https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python" target="_blank" rel="external">原文地址</a></h3><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul>
+        <h2 id="翻译：GNU-Radio下的Python编程"><a href="#翻译：GNU-Radio下的Python编程" class="headerlink" title="翻译：GNU Radio下的Python编程"></a>翻译：GNU Radio下的Python编程</h2><h3 id="原文地址"><a href="#原文地址" class="headerlink" title="原文地址"></a><a href="https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python" target="_blank" rel="external">原文地址</a></h3><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul>
 <li>Python模块</li>
 <li>使用面向对象的模块制作实际的应用程序/函数</li>
 <li>怎样田间面向对象模块</li>
@@ -354,8 +360,6 @@
 <p>连接模块所使用的函数是<strong>self.connect(block1,block2,block3,…)</strong>,这样他将会连接block1的输出与block2的输入，block2的输出和block3的输入等等。我们能够会用一个connect()连接多个模块，但这只对一对一的通信有效。如果我们回到我们初始化的流程图，<strong>Audio Sink</strong>模块有两个输入，连接他们的方法是使用上面的语句。这第一个连线只连接src0（350Hz 波形）到dst的第一个输入，第二个连线是将src1（440Hz波形）连接到dst的第二个输入。到目前为止代码跟我们在开始创建流程图的代码是一样的，其余的行只是启动流程图，并提供了一个键盘中断。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> _name_ = <span class="string">'_main_'</span>:</div><div class="line">    <span class="keyword">try</span>：</div><div class="line">        my_top_block().run()</div><div class="line">    <span class="keyword">except</span> KeyboardInterrupt:</div><div class="line">        <span class="keyword">pass</span></div></pre></td></tr></table></figure></p>
 <p>当我们不需要使用GRC创建Python文件，我们已经经过了学习GNU Radio的初级阶段。</p>
 
-          
-        
       
     </div>
     
@@ -372,143 +376,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/本科阶段（2014-）个人总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="INGslh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="INGslh's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/16/本科阶段（2014-）个人总结/" itemprop="url">本科阶段（2014-）个人总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-16T15:43:05+08:00">
-                2017-09-16
-              </time>
+              <a href="/2017/09/16/本科阶段（2014-）个人总结/" rel="next" title="本科阶段（2014-）个人总结">
+                <i class="fa fa-chevron-left"></i> 本科阶段（2014-）个人总结
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>最近刚把毕业之后的问题敲定下来，博主还会再在湘大呆三年。</p>
-<p>羊牯塘，我的第二家乡。</p>
-<p>现在大四，不用考研和找工作，不用赶项目进度，暂时不用考虑毕业设计，加上每周一节课的节奏，算是过上了之前三年想都不敢想的奢靡生活，于是就打算开个技术博客，定期总结一下自己在工程方面遇到的问题和解决方案，顺便在记录一下自己的一些想法，能够满足一下我个人的艺术追求。（正经。。</p>
-<p>本科的时候由于参加了实验室，之后就感觉自己的大学生活跟周围的同学有点不一样，想在这里做一个简单的回顾，作为博客的第一篇文章。  ：）</p>
-<h3 id="2014-2015："><a href="#2014-2015：" class="headerlink" title="2014-2015："></a>2014-2015：</h3><p>大一的时候啥也不懂，属于傻白甜，想加入实验室这个想法基本上受学长们的“诱骗”确定的，实验室的保研率多高，拿到的offer有多好，类似这些。现在想一想，抛开过程去讨论这些，对于当时的我确实有吸引力，但是真正这几年下来，所收获的真正宝贵的东西，是很难用保研或者就业这些比较相对明确的标准去衡量的。</p>
-<p>寒假的时候第一次接触单片机，在tb买的一套51的开发板，学习的方式通过看配套的资料和例程，定时器是简单了解，AD、DA这些压根没看，没打开啥新世界的大门，只是感觉通过芯片的电平变化控制外围器件（led灯，蜂鸣器）的工作跟之前自己所理解的高中物理的那种电路控制不太一样。</p>
-<p>大一下学期自费买了一些器材想搭一个51控制的巡线小车，当时经验为零，一个人闭门造车，结果失败。</p>
-<p>七月初，参加TI实验室培训班，记得第一个任务是几个人一组去做一个msp430的最小系统板，早上八点去，晚上八点回，坐在信息楼202的那个木板凳上，一个礼拜下来，屁股饱受摧残。</p>
-<p>那是我第一次画电路板（也是最后一次），大部分时间都是自己查芯片手册、找封装，遇到问题了再彼此交流下。这种学习方式真的非常高效，目的性很明确，而且也格外专注。</p>
-<p>我记得中间周末的时候三翼要组织部长级素拓，我为了赶进度前一天晚上通宵画板子，熬到凌晨四点多把板子画好，然后六点多集合跟着三翼那帮人又去长沙浪了。</p>
-<p>那是第一次为了赶项目进度熬夜，忘了当时坐在大巴上的感受了，现在推测当时的心情应该是自我成就感爆棚，要不然之后做消防手环的时候，也不会熬得那么夸张。实际上之后在素拓的时候家成还给我打电话，告诉我画得板子有问题，让我回去之后再改……</p>
-<p>回来之后就开始接手老师布置的第二个任务做一个51控制的智能小车，包括红外巡线，超声波测距，射频通信这些功能。跟我之前做失败那个51小车差不多，当时和凡凡、彭总搭的伙。由于队友很给力，加上网上资料很多，做了大概半个月吧，基本要求都实现了</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -518,10 +407,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -529,6 +419,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -549,8 +443,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">INGslh</p>
@@ -593,6 +496,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#翻译：GNU-Radio下的Python编程"><span class="nav-number">1.</span> <span class="nav-text">翻译：GNU Radio下的Python编程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#原文地址"><span class="nav-number">1.1.</span> <span class="nav-text">原文地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#目标"><span class="nav-number">1.2.</span> <span class="nav-text">目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预备知识"><span class="nav-number">1.3.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1介绍Python编写GNURadio程序"><span class="nav-number">1.4.</span> <span class="nav-text">3.1介绍Python编写GNURadio程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-1-GRC生成的Python文件"><span class="nav-number">1.4.1.</span> <span class="nav-text">3.1.1 GRC生成的Python文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-2-拆解digal-tone"><span class="nav-number">1.4.2.</span> <span class="nav-text">3.1.2 拆解digal_tone</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-3-阅读文档"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.1.3 阅读文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-1-4-一起连接到模块"><span class="nav-number">1.4.4.</span> <span class="nav-text">3.1.4 一起连接到模块</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -713,6 +632,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
