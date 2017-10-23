@@ -95,13 +95,41 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="INGslh&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="教程：GNU Radio Companion原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始之前，我们需要说明一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="翻译：GNU Radio下的GRC编程">
+<meta property="og:url" content="http://yoursite.com/2017/10/18/Guided Tutorial GRC翻译/index.html">
 <meta property="og:site_name" content="INGslh&#39;s blog">
+<meta property="og:description" content="教程：GNU Radio Companion原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始之前，我们需要说明一下">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Unity-2d-shell_008.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Search.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Properties_options.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:ld_python.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Properties_errors.png">
+<meta property="og:image" content="https://wiki.gunradio.org/index.php/File:Tutorial_two_1.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Commandspace.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Wxgen_qtflow.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Qtgen_wxflow.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Complex_size.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Types.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Size_mismatch.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_2.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_3.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Probe_properties.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Probe_documentation.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Fxn_probe_properties.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Fxn_probe_documentation.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Probe_search.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_5.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Throttle.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_6.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Sampling_mismatch.png">
+<meta property="og:updated_time" content="2017-10-23T06:30:15.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="INGslh&#39;s blog">
+<meta name="twitter:title" content="翻译：GNU Radio下的GRC编程">
+<meta name="twitter:description" content="教程：GNU Radio Companion原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始之前，我们需要说明一下">
+<meta name="twitter:image" content="https://wiki.gnuradio.org/index.php/File:Unity-2d-shell_008.png">
 
 
 
@@ -131,13 +159,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/18/Guided Tutorial GRC翻译/"/>
 
 
 
 
 
-  <title>INGslh's blog</title>
+  <title>翻译：GNU Radio下的GRC编程 | INGslh's blog</title>
   
 
 
@@ -156,8 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -230,165 +257,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/20/翻译GNU radio教程：GNUradio的Python编程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="INGslh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="INGslh's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/20/翻译GNU radio教程：GNUradio的Python编程/" itemprop="url">翻译：GNU Radio下的Python编程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-20T15:43:05+08:00">
-                2017-10-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="翻译：GNU-Radio下的Python编程"><a href="#翻译：GNU-Radio下的Python编程" class="headerlink" title="翻译：GNU Radio下的Python编程"></a>翻译：GNU Radio下的Python编程</h2><h3 id="原文地址"><a href="#原文地址" class="headerlink" title="原文地址"></a><a href="https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python" target="_blank" rel="external">原文地址</a></h3><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul>
-<li>Python模块</li>
-<li>使用面向对象的模块制作实际的应用程序/函数</li>
-<li>怎样田间面向对象模块</li>
-<li>怎样添加带有gr_modtool的Python模块，以及怎样对它们编程</li>
-<li>QPSK绘图</li>
-<li>怎样对模块田间GRC绑定</li>
-</ul>
-<h3 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h3><ul>
-<li>安装GNU Radio3.7.4或更新的版本</li>
-<li>已学习GRC教程</li>
-<li>对Python有一定了解</li>
-</ul>
-<h3 id="3-1介绍Python编写GNURadio程序"><a href="#3-1介绍Python编写GNURadio程序" class="headerlink" title="3.1介绍Python编写GNURadio程序"></a>3.1介绍Python编写GNURadio程序</h3><p>这个教程一共有3个部分。第一个部分是如何去修改，创造或者简单理解GRC产生的Python文件。第二部分是如何从头开始创造我们自定义的面向对象的模块。最后我们通过一个实际的工程去得到更多的练习，同时关于在我们自己的工程中建造一个大体印象。和上一个教程一样，所有的内容包括图片，源程序和grc文件，包含在<a href="https://github.com/gnuradio/gr-tutorial" target="_blank" rel="external">github界面</a>,我们可以按照GRC教程中的指导下载到本地。<br>同样我们需要建两个文件夹，一个是“解决方案”文件夹，一个是“工程”文件夹：</p>
-<blockquote>
-<p>/home/user/gnuradio/tutorials/solutions<br>/home/user/gnuradio/tutorials/work</p>
-</blockquote>
-<p>一般来说，如果我们将鼠标悬停在GRC流程图上，我们能够看到相应的文件名。同样也应用于其他图片上。</p>
-<h4 id="3-1-1-GRC生成的Python文件"><a href="#3-1-1-GRC生成的Python文件" class="headerlink" title="3.1.1 GRC生成的Python文件"></a>3.1.1 GRC生成的Python文件</h4><p>让我们在GRC中看dial-tone这个例子：<br><img src="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/tutorial_three_1.png" alt=""><br>当我们点击<strong>生成</strong>（Generate）按钮，终端告诉我们产生了一个.py文件，所以我们打开它看到它的代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env Python</span></div><div class="line"><span class="comment">##################################################</span></div><div class="line"><span class="comment"># Gnuradio Python Flow Graph</span></div><div class="line"><span class="comment"># Title: Tutorial Three</span></div><div class="line"><span class="comment"># Generated: Wed Mar 12 15:35:18 2014</span></div><div class="line"><span class="comment">##################################################</span></div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> analog</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> audio</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> eng_notation</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> gr</div><div class="line"><span class="keyword">from</span> gnuradio.eng_option <span class="keyword">import</span> eng_option</div><div class="line"><span class="keyword">from</span> gnuradio.filter <span class="keyword">import</span> firdes</div><div class="line"><span class="keyword">from</span> optparse <span class="keyword">import</span> OptionParser</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">tutorial_three</span><span class="params">(gr.top_block)</span>:</span></div><div class="line"> </div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">         gr.top_block.__init__(self, <span class="string">"Tutorial Three"</span>)</div><div class="line"> </div><div class="line">         <span class="comment">##################################################</span></div><div class="line">         <span class="comment"># Variables</span></div><div class="line">         <span class="comment">##################################################</span></div><div class="line">         self.samp_rate = samp_rate = <span class="number">32000</span></div><div class="line"> </div><div class="line">         <span class="comment">##################################################</span></div><div class="line">         <span class="comment"># Blocks</span></div><div class="line">         <span class="comment">##################################################</span></div><div class="line">         self.audio_sink_0 = audio.sink(samp_rate, <span class="string">""</span>, <span class="keyword">True</span>)</div><div class="line">         self.analog_sig_source_x_1 = analog.sig_source_f(samp_rate, analog.GR_SIN_WAVE, <span class="number">350</span>, <span class="number">.1</span>, <span class="number">0</span>)</div><div class="line">         self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, analog.GR_SIN_WAVE, <span class="number">440</span>, <span class="number">.1</span>, <span class="number">0</span>)</div><div class="line"> </div><div class="line">         <span class="comment">##################################################</span></div><div class="line">         <span class="comment"># Connections</span></div><div class="line">         <span class="comment">##################################################</span></div><div class="line">         self.connect((self.analog_sig_source_x_1, <span class="number">0</span>), (self.audio_sink_0, <span class="number">1</span>))</div><div class="line">         self.connect((self.analog_sig_source_x_0, <span class="number">0</span>), (self.audio_sink_0, <span class="number">0</span>))</div><div class="line"></div><div class="line"><span class="comment"># QT sink close method reimplementation</span></div><div class="line"> </div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">get_samp_rate</span><span class="params">(self)</span>:</span></div><div class="line">         <span class="keyword">return</span> self.samp_rate</div><div class="line"> </div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">set_samp_rate</span><span class="params">(self, samp_rate)</span>:</span></div><div class="line">         self.samp_rate = samp_rate</div><div class="line">         self.analog_sig_source_x_0.set_sampling_freq(self.samp_rate)</div><div class="line">         self.analog_sig_source_x_1.set_sampling_freq(self.samp_rate)</div><div class="line"> </div><div class="line"> <span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">     parser = OptionParser(option_class=eng_option, usage=<span class="string">"%prog: [options]"</span>)</div><div class="line">     (options, args) = parser.parse_args()</div><div class="line">     tb = tutorial_three()</div><div class="line">     tb.start()</div><div class="line">     raw_input(<span class="string">'Press Enter to quit: '</span>)</div><div class="line">     tb.stop()</div><div class="line">     tb.wait()</div></pre></td></tr></table></figure>
-<p>我们首先看到的GRC会生成Python文件，我们可以修改一些我们无法在GRC，例如执行仿真。在Python中可用的库，为我们打开了一个新的领域。现在我们将探索GRC Python文件的结构，这样我们就可以轻松地创建更有趣的应用程序。</p>
-<h4 id="3-1-2-拆解digal-tone"><a href="#3-1-2-拆解digal-tone" class="headerlink" title="3.1.2 拆解digal_tone"></a>3.1.2 拆解digal_tone</h4><p>当检查这个代码，我们熟悉这个文档。GNU Radio使用Doxygen（一个软件）。理解文档最有效的方式理解函数，这样我们可以简化我们的digal_tone代码，使其只包含最重要的部分。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/usr/bin/env Python</span></div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> gr</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> audio</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> analog</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">my_top_block</span><span class="params">(gr.top_block)</span>:</span></div><div class="line">     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></div><div class="line">         gr.top_block.__init__(self)</div><div class="line"> </div><div class="line">         sample_rate = <span class="number">32000</span></div><div class="line">         ampl = <span class="number">0.1</span></div><div class="line"> </div><div class="line">         src0 = analog.sig_source_f(sample_rate, analog.GR_SIN_WAVE, <span class="number">350</span>, ampl)</div><div class="line">         src1 = analog.sig_source_f(sample_rate, analog.GR_SIN_WAVE, <span class="number">440</span>, ampl)</div><div class="line">         dst = audio.sink(sample_rate, <span class="string">""</span>)</div><div class="line">         self.connect(src0, (dst, <span class="number">0</span>))</div><div class="line">         self.connect(src1, (dst, <span class="number">1</span>)</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</div><div class="line">     <span class="keyword">try</span>:</div><div class="line">         my_top_block().run()</div><div class="line">     <span class="keyword">except</span> [[KeyboardInterrupt]]:</div><div class="line">         <span class="keyword">pass</span></div></pre></td></tr></table></figure>
-<p>让我们逐一检查每一行<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#!/user/bin/env Python</span></div></pre></td></tr></table></figure></p>
-<p>告诉shell这是一个python文件，并使用Python解释器运行这个文件。这一句始终放在顶部。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> gr</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> audio</div><div class="line"><span class="keyword">from</span> gnuradio <span class="keyword">import</span> analog</div></pre></td></tr></table></figure></p>
-<p>告诉python需要包含的文件。我们必须包含<strong>gr</strong>才能运行GNU Radio应用。无线电信宿应该包含在无线电模块，同时信号源（signal_source_f）应该包含在分析模块。<a href="https://wiki.gnuradio.org/index.php/Guided_Tutorial_GNU_Radio_in_Python" target="_blank" rel="external">PEP8</a><br>告诉了我们我们应该在自己代码中包含的所有头文件。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">my_top_block</span><span class="params">(gr.top_block)</span></span></div></pre></td></tr></table></figure></p>
-<p>默认的一个类叫做”my_top_block”,它继承于于另一个类——gr.top_block。这个类是流程图的一个基本的容器。通过继承，我们得到所有的回调和函数，我们需要添加模块并将它们相互连接。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">_init_</span><span class="params">(self)</span>:</span></div></pre></td></tr></table></figure></p>
-<p>这个类只有一个默认的成员函数“<em>init()</em>”,它是这个类的构造函数。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gr.top_block._init_(self)</div></pre></td></tr></table></figure></p>
-<p>调用父类的构造函数（在python语言中，这需要显式调用。在python中大多数东西都需要显式调用，这是Python的一个原则）<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sample_rate = <span class="number">32000</span></div><div class="line">ampl = <span class="number">0.1</span></div></pre></td></tr></table></figure></p>
-<p>设定采样频率和幅值，我们稍后将会用到。</p>
-<h4 id="3-1-3-阅读文档"><a href="#3-1-3-阅读文档" class="headerlink" title="3.1.3 阅读文档"></a>3.1.3 阅读文档</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sec0=analog.sig_source_f(sample_rate,analog.GR_SIN_WAVE,<span class="number">350</span>,ampl)</div><div class="line">sec1=analog.sig_source_f(sample_rate,analog.GR_SIN_WAVE,<span class="number">440</span>,ampl)</div></pre></td></tr></table></figure>
-<p>这里我们使用了GNU Radio的函数，在<a href="https://gnuradio.org/doc/doxygen/classgr_1_1analog_1_1sig__source__f.html" target="_blank" rel="external">GNU Radio手册</a>中<strong>analog.sig_source_f</strong><br>是可以查阅到的。我们能够通过搜索工具很容易的搜索到它。<br><img src="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_search.png" alt=""><br>我们向下滚动到<strong>成员函数文档</strong>看到这个函数是如何被使用的，同时它的参数如下图所示。<br><img src="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_source.png" alt=""><br>我们看到我们的函数<strong>analog.sig_source_f</strong>有5个输入函数，但是我们的代码只需要4个。如文档所示，<strong>偏置offset</strong>的默认值为0，所以程序没有报错。第一个参数<strong>sampling_freq</strong>是我们代码中默认的<strong>采样频率</strong>。第二个参数是一个<strong>gr::analog::gr_wavefrom_t</strong>的波形，我们可以通过点击<a href="https://gnuradio.org/doc/doxygen/group__waveform__generators__blk.html#gac97c0f42ffb63f1265decceaaeab9177" target="_blank" rel="external">这个链接</a>了解更多。<br><img src="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_waveform.png" alt=""></p>
-<p>我们看到有几组选项可以选择。在本例中，我们选择了<strong>GR_\SIN_WAVE</strong>。第三个输入为<strong>wave_freq</strong>(波形频率)，我们输入的是“350”和“440”。第四个参数是幅度值，即我们设定的默认值。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dst = audio.sink(sample_rate,<span class="string">""</span>)</div></pre></td></tr></table></figure></p>
-<p>因为文档很重要，所以我们看一下另一个例子，我们在GR手册中搜索<strong>audio.sink</strong><br><img src="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_sink.png" alt=""><br>我们像之前一样向下滚动滑轮到<strong>成员函数文档</strong>，去看它接收的参数。<br><img src="https://raw.githubusercontent.com/gnuradio/gr-tutorial/master/examples/tutorial3/images/hello_sink_detail.png" alt=""><br>这次我们有3个函数，最后一个是可选的。在我们的代码中第一次输入的<strong>sample_rate</strong>作为我们的采样频率。第二个参数中我们有一个选项去选择一个设备去输出无线电。如果我们只留下“ ”，它会默认使用我们的机器。</p>
-<h4 id="3-1-4-一起连接到模块"><a href="#3-1-4-一起连接到模块" class="headerlink" title="3.1.4 一起连接到模块"></a>3.1.4 一起连接到模块</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">self.connect(src0,(dst,<span class="number">0</span>))</div><div class="line">self.connect(src1,(dst,<span class="number">1</span>))</div></pre></td></tr></table></figure>
-<p>连接模块所使用的函数是<strong>self.connect(block1,block2,block3,…)</strong>,这样他将会连接block1的输出与block2的输入，block2的输出和block3的输入等等。我们能够会用一个connect()连接多个模块，但这只对一对一的通信有效。如果我们回到我们初始化的流程图，<strong>Audio Sink</strong>模块有两个输入，连接他们的方法是使用上面的语句。这第一个连线只连接src0（350Hz 波形）到dst的第一个输入，第二个连线是将src1（440Hz波形）连接到dst的第二个输入。到目前为止代码跟我们在开始创建流程图的代码是一样的，其余的行只是启动流程图，并提供了一个键盘中断。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> _name_ = <span class="string">'_main_'</span>:</div><div class="line">    <span class="keyword">try</span>：</div><div class="line">        my_top_block().run()</div><div class="line">    <span class="keyword">except</span> KeyboardInterrupt:</div><div class="line">        <span class="keyword">pass</span></div></pre></td></tr></table></figure></p>
-<p>当我们不需要使用GRC创建Python文件，我们已经经过了学习GNU Radio的初级阶段。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -418,9 +289,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/10/18/Guided Tutorial GRC翻译/" itemprop="url">翻译：GNU Radio下的GRC编程</a></h1>
+          <h1 class="post-title" itemprop="name headline">翻译：GNU Radio下的GRC编程</h1>
         
 
         <div class="post-meta">
@@ -470,9 +339,7 @@
       
 
       
-        
-          
-            <h1 id="教程：GNU-Radio-Companion"><a href="#教程：GNU-Radio-Companion" class="headerlink" title="教程：GNU Radio Companion"></a>教程：GNU Radio Companion</h1><h2 id="原文地址"><a href="#原文地址" class="headerlink" title="原文地址"></a><a href="https://wiki.gnuradio,org/index.php/Guided_Tutorial_GRC" target="_blank" rel="external">原文地址</a></h2><h3 id="目标："><a href="#目标：" class="headerlink" title="目标："></a>目标：</h3><ol>
+        <h1 id="教程：GNU-Radio-Companion"><a href="#教程：GNU-Radio-Companion" class="headerlink" title="教程：GNU Radio Companion"></a>教程：GNU Radio Companion</h1><h2 id="原文地址"><a href="#原文地址" class="headerlink" title="原文地址"></a><a href="https://wiki.gnuradio,org/index.php/Guided_Tutorial_GRC" target="_blank" rel="external">原文地址</a></h2><h3 id="目标："><a href="#目标：" class="headerlink" title="目标："></a>目标：</h3><ol>
 <li>使用标准的模块（block）库创建流程图</li>
 <li>学习如何使用仪表化的模块调试流程图</li>
 <li>学习如何在GNU Radio中如何采样和节流工作（throttle works）</li>
@@ -536,8 +403,6 @@
 </li>
 </ol>
 
-          
-        
       
     </div>
     
@@ -554,143 +419,32 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/16/本科阶段（2014-）个人总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="INGslh">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="INGslh's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/16/本科阶段（2014-）个人总结/" itemprop="url">本科阶段（2014-）个人总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-16T15:43:05+08:00">
-                2017-09-16
-              </time>
+              <a href="/2017/09/16/本科阶段（2014-）个人总结/" rel="next" title="本科阶段（2014-）个人总结">
+                <i class="fa fa-chevron-left"></i> 本科阶段（2014-）个人总结
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
+              <a href="/2017/10/20/翻译GNU radio教程：GNUradio的Python编程/" rel="prev" title="翻译：GNU Radio下的Python编程">
+                翻译：GNU Radio下的Python编程 <i class="fa fa-chevron-right"></i>
+              </a>
             
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>最近刚把毕业之后的问题敲定下来，博主还会再在湘大呆三年。</p>
-<p>羊牯塘，我的第二家乡。</p>
-<p>现在大四，不用考研和找工作，不用赶项目进度，暂时不用考虑毕业设计，加上每周一节课的节奏，算是过上了之前三年想都不敢想的奢靡生活，于是就打算开个技术博客，定期总结一下自己在工程方面遇到的问题和解决方案，顺便在记录一下自己的一些想法，能够满足一下我个人的艺术追求。（正经。。</p>
-<p>本科的时候由于参加了实验室，之后就感觉自己的大学生活跟周围的同学有点不一样，想在这里做一个简单的回顾，作为博客的第一篇文章。  ：）</p>
-<h3 id="2014-2015："><a href="#2014-2015：" class="headerlink" title="2014-2015："></a>2014-2015：</h3><p>大一的时候啥也不懂，属于傻白甜，想加入实验室这个想法基本上受学长们的“诱骗”确定的，实验室的保研率多高，拿到的offer有多好，类似这些。现在想一想，抛开过程去讨论这些，对于当时的我确实有吸引力，但是真正这几年下来，所收获的真正宝贵的东西，是很难用保研或者就业这些比较相对明确的标准去衡量的。</p>
-<p>寒假的时候第一次接触单片机，在tb买的一套51的开发板，学习的方式通过看配套的资料和例程，定时器是简单了解，AD、DA这些压根没看，没打开啥新世界的大门，只是感觉通过芯片的电平变化控制外围器件（led灯，蜂鸣器）的工作跟之前自己所理解的高中物理的那种电路控制不太一样。</p>
-<p>大一下学期自费买了一些器材想搭一个51控制的巡线小车，当时经验为零，一个人闭门造车，结果失败。</p>
-<p>七月初，参加TI实验室培训班，记得第一个任务是几个人一组去做一个msp430的最小系统板，早上八点去，晚上八点回，坐在信息楼202的那个木板凳上，一个礼拜下来，屁股饱受摧残。</p>
-<p>那是我第一次画电路板（也是最后一次），大部分时间都是自己查芯片手册、找封装，遇到问题了再彼此交流下。这种学习方式真的非常高效，目的性很明确，而且也格外专注。</p>
-<p>我记得中间周末的时候三翼要组织部长级素拓，我为了赶进度前一天晚上通宵画板子，熬到凌晨四点多把板子画好，然后六点多集合跟着三翼那帮人又去长沙浪了。</p>
-<p>那是第一次为了赶项目进度熬夜，忘了当时坐在大巴上的感受了，现在推测当时的心情应该是自我成就感爆棚，要不然之后做消防手环的时候，也不会熬得那么夸张。实际上之后在素拓的时候家成还给我打电话，告诉我画得板子有问题，让我回去之后再改……</p>
-<p>回来之后就开始接手老师布置的第二个任务做一个51控制的智能小车，包括红外巡线，超声波测距，射频通信这些功能。跟我之前做失败那个51小车差不多，当时和凡凡、彭总搭的伙。由于队友很给力，加上网上资料很多，做了大概半个月吧，基本要求都实现了</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -700,10 +454,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -711,6 +466,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -731,8 +490,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">INGslh</p>
@@ -775,6 +543,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#教程：GNU-Radio-Companion"><span class="nav-number">1.</span> <span class="nav-text">教程：GNU Radio Companion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原文地址"><span class="nav-number">1.1.</span> <span class="nav-text">原文地址</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#目标："><span class="nav-number">1.1.1.</span> <span class="nav-text">目标：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预备知识"><span class="nav-number">1.1.2.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-配置教程"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.1 配置教程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-复制仓库（Repository：git术语）"><span class="nav-number">1.1.3.1.</span> <span class="nav-text">2.1.1 复制仓库（Repository：git术语）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2安装Modules"><span class="nav-number">1.1.3.2.</span> <span class="nav-text">2.1.2安装Modules</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-开始了解GRC"><span class="nav-number">1.1.4.</span> <span class="nav-text">2.2 开始了解GRC</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1查找模块"><span class="nav-number">1.1.4.1.</span> <span class="nav-text">2.2.1查找模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2修改模块属性"><span class="nav-number">1.1.4.2.</span> <span class="nav-text">2.2.2修改模块属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3我的第一个流程图"><span class="nav-number">1.1.4.3.</span> <span class="nav-text">2.2.3我的第一个流程图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4关于生成选项的说明"><span class="nav-number">1.1.4.4.</span> <span class="nav-text">2.2.4关于生成选项的说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5检查输出"><span class="nav-number">1.1.4.5.</span> <span class="nav-text">2.2.5检查输出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3使用组件（Using-the-Companion）"><span class="nav-number">1.1.5.</span> <span class="nav-text">2.3使用组件（Using the Companion）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1时间-amp-频率流程图"><span class="nav-number">1.1.5.1.</span> <span class="nav-text">2.3.1时间&频率流程图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4如何使用INSERT-BLOCK-NAME-HERE"><span class="nav-number">1.1.6.</span> <span class="nav-text">2.4如何使用INSERT_BLOCK_NAME_HERE</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-1-检查探针的号快块"><span class="nav-number">1.1.6.1.</span> <span class="nav-text">2.4.1 检查探针的号快块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-2显示基于文本的信息"><span class="nav-number">1.1.6.2.</span> <span class="nav-text">2.4.2显示基于文本的信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-3关于节流模块-Throttle-Block-的一个注意事项"><span class="nav-number">1.1.6.3.</span> <span class="nav-text">2.4.3关于节流模块(Throttle Block)的一个注意事项</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-4-4采样频率的错配"><span class="nav-number">1.1.6.4.</span> <span class="nav-text">2.4.4采样频率的错配</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5总结"><span class="nav-number">1.1.7.</span> <span class="nav-text">2.5总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-5-1一些我们现在的问题"><span class="nav-number">1.1.7.1.</span> <span class="nav-text">2.5.1一些我们现在的问题</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -895,6 +679,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
 
   
 
