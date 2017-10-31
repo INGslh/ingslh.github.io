@@ -103,34 +103,34 @@
 <meta property="og:site_name" content="INGslh&#39;s blog">
 <meta property="og:description" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Unity-2d-shell_008.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Search.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Properties_options.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:ld_python.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Properties_errors.png">
-<meta property="og:image" content="https://wiki.gunradio.org/index.php/File:Tutorial_two_1.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Commandspace.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Wxgen_qtflow.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Qtgen_wxflow.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Complex_size.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Types.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Size_mismatch.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_2.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_3.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Probe_properties.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Probe_documentation.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Fxn_probe_properties.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Fxn_probe_documentation.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Probe_search.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_5.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Throttle.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Tutorial_two_6.png">
-<meta property="og:image" content="https://wiki.gnuradio.org/index.php/File:Sampling_mismatch.png">
-<meta property="og:updated_time" content="2017-10-30T13:19:30.740Z">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/a/a6/Unity-2d-shell_008.png/600px-Unity-2d-shell_008.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/9/95/Search.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/f/ff/Properties_options.png/400px-Properties_options.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/7/71/Id_python.png/400px-Id_python.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/b/b2/Properties_errors.png/400px-Properties_errors.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/9/94/Tutorial_two_1.png/600px-Tutorial_two_1.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/4/41/Commandspace.png/600px-Commandspace.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/1/1c/Wxgen_qtflow.png/600px-Wxgen_qtflow.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/3/3f/Qtgen_wxflow.png/600px-Qtgen_wxflow.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/f/f8/Complex_sine.png/600px-Complex_sine.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/7/7c/Types.png/250px-Types.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/4/43/Size_mismatch.png/600px-Size_mismatch.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/2/2e/Tutorial_two_2.png/600px-Tutorial_two_2.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/b/b9/Tutorial_two_3.png/600px-Tutorial_two_3.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/6/6f/Probe_properties.png/400px-Probe_properties.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/2/20/Probe_documentation.png/400px-Probe_documentation.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/b/b1/Fxn_probe_properties.png/400px-Fxn_probe_properties.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/d/dd/Fxn_probe_documentation.png/400px-Fxn_probe_documentation.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/1/18/Probe_search.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/0/03/Tutorial_two_5.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/6/63/Throttle.png/600px-Throttle.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/c/cd/Tutorial_two_6.png/600px-Tutorial_two_6.png">
+<meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/d/d1/Sampling_mismatch.png/600px-Sampling_mismatch.png">
+<meta property="og:updated_time" content="2017-10-31T09:32:38.125Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程">
 <meta name="twitter:description" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始">
-<meta name="twitter:image" content="https://wiki.gnuradio.org/index.php/File:Unity-2d-shell_008.png">
+<meta name="twitter:image" content="https://wiki.gnuradio.org/images/thumb/a/a6/Unity-2d-shell_008.png/600px-Unity-2d-shell_008.png">
 
 
 
@@ -361,48 +361,65 @@
 <li>GNU Radio 3.7.4或之后的版本</li>
 <li><a href="https://wiki.gnuradio.marorg/index.php/Guided_Touria_Introduction" target="_blank" rel="external">教程1</a></li>
 </ol>
-<h3 id="2-1-配置教程"><a href="#2-1-配置教程" class="headerlink" title="2.1 配置教程"></a>2.1 配置教程</h3><p>在我们开始之前，我们需要说明一下我们怎样配置教程2~7。我们在<a href="https://github.com/gnuradio/gnuradio" target="_blank" rel="external">github</a>上包含了我们教程中的所有资料，包括图片，grc文件和模块文件。这样我们能有一个对于这些解决方案的参考。虽然我们可以参考这些文件，但是为了我能得到练习，我们大部分还要创建我们自己的文件。因此我们创建了两个文件夹去存放官方的解决方案和我们自己的文件。</p>
-<blockquote>
-<p>/home/user/gnuradio/tutorials/solutions<br>/home/user/gnuradio/tutirials/work</p>
-</blockquote>
-<h4 id="2-1-1-复制仓库（Repository：git术语）"><a href="#2-1-1-复制仓库（Repository：git术语）" class="headerlink" title="2.1.1 复制仓库（Repository：git术语）"></a>2.1.1 复制仓库（Repository：git术语）</h4><p>首先我们需要复制这个git路径，所以让我们打开终端，移动到之前我们创建的solutions路径下面。我们使用git复制gr-tutorial仓库文件。</p>
-<blockquote>
-<p>$ git clone <a href="https://github.com/gnuradio/gr-tutorial" target="_blank" rel="external">https://github.com/gnuradio/gr-tutorial</a><br>git后，我们应该能够看到和github仓库中完全相同的文件和文件夹，如果文件没有丢失，我们可以将这些solutions文件复制到work路径下面。或者如果我们已经知道如何使用python和C++创建OOT模块，我们可以只安装那些定制模块（custom modules）,跟随高级教程继续学习。我们能通过观察完整的流程图，在教程的examples路径下面找到对应的文件。</p>
-</blockquote>
-<h4 id="2-1-2安装Modules"><a href="#2-1-2安装Modules" class="headerlink" title="2.1.2安装Modules"></a>2.1.2安装Modules</h4><p>在复制的仓库下面，我们能通过运行下面的指令安装solutions</p>
-<blockquote>
-<p>mkdir build<br>cd build<br>cmake ..<br>make -j8<br>sudo make install<br>sudo ldconfig<br>如果我们想自己完成教程，能通在build路径下面运行<br>sudo make uninstall<br>sudo ldconfig</p>
-</blockquote>
-<h3 id="2-2-开始了解GRC"><a href="#2-2-开始了解GRC" class="headerlink" title="2.2 开始了解GRC"></a>2.2 开始了解GRC</h3><p>我们已经从教程一了解到，相对于使用硬件去开发，GNU Radio是一种开发无线电的工具软件。在这个教程中，我们从简单的着手，探索如何使用GRC（GNU Radio Companion），GNU Radio的图形化工具用于产生不同的音调，我们应该记住GRC是为了简化我们使用GNU Radio，通过图形创建python文件而不是通过编写代码。<br>GRC界面有四个部分组成，这四个部分分别是：模块库，工具栏，终端和工作区域。<br><img src="https://wiki.gnuradio.org/index.php/File:Unity-2d-shell_008.png" alt=""><br>这个教程是为了实际操作，所以请从阅读状态中跳出来然后来进行实验，我们将尽可能想指南一样的简单去做这些教程，最好的学习方式就是去尝试他：提出一个问题，思考一个可行的解决方案，然后尝试他。让我们开始使用GRC吧！首先打开终端（ctrl+alt+t 在Ubuntu系统中）然后输入</p>
-<blockquote>
-<p>$ gnuradio-companion<br>如果我们不能打开GRC我们需要重新安装GNU Radio。</p>
-</blockquote>
-<h4 id="2-2-1查找模块"><a href="#2-2-1查找模块" class="headerlink" title="2.2.1查找模块"></a>2.2.1查找模块</h4><p>在GRC模块路径下，模块库包含了不同的模块。第一次查找模块可能看起来有些难。举个例子，如果我们想要生成一个波形，我们应该查找哪个种类的模块呢？我们看到有一个<strong>波形生成器（Warefrom Generate）</strong>分类，但如果我们想要显示我们的数据，但是还不确定用什么方式显示会怎么样？我们从教程一知道，这就是我们通常所说的<em>漏（sink）</em>；但是浏览这个列表发现没有“Sink”这个类。解决方案是点击放大镜图标去搜索，或者使用Ctrl+f，然后输入一个能识别所需模块的关键词。如果我们输入“sink”，我们能够发现所有名字中包含“sink”的模块和每一个模块所在的类别。<br><img src="https://wiki.gnuradio.org/index.php/File:Search.png" alt=""><br>现在我们添加一个叫做<strong>QT GUI Time Sink</strong>的模块，通过在它的名字上点击同时拖拽它到工作空间</p>
-<h4 id="2-2-2修改模块属性"><a href="#2-2-2修改模块属性" class="headerlink" title="2.2.2修改模块属性"></a>2.2.2修改模块属性</h4><p>这个工作空间包含流程图和各种各样的模块参数，让我们双击<strong>Options Block</strong>去查看它的属性。我们看到窗口如下所示：<br><img src="https://wiki.gnuradio.org/index.php/File:Properties_options.png" alt=""><br>这些模块属性可以被改变以适应不同的工作。让我们删去当前的名字，注意到ID变蓝。这个颜色的变化意味着这个信息已经被编辑，但是还没有被保存。让我们改变<strong>Window Size</strong>这个属性到“300,300”同时点击确定。呀！几乎所有的工作空间都被截断了，使用ctrl+z返回我们在默认尺寸，如果我们退回到<strong>Options Block</strong>属性界面，我们能够发现不同的标签页，其中一个标题叫做文档（documentation）。<br><img src="https://wiki.gnuradio.org/index.php/File:ld_python.png" alt=""><br>通过上图中框选的部分我们知道，<strong>ID实际上被用来作为生成的python文件的名字</strong>。<br><img src="https://wiki.gnuradio.org/index.php/File:Properties_errors.png" alt=""><br>现在我们删去整个ID字符串，注意到在下面出现了一个错误信息，同时注意到ID这个参数现在是红色的，向我们精准展示了那里出现了错误。<br>为了保证结构同意，我们把这个ID改为“tutorial_two_1”。我们也要保证<strong>Grnerate Options</strong>属性选择为“QT GUI”，因为我们使用的是QT GUI漏而不是WX GUI漏，新版本的GUI Radio默认使用的是QT GUI。ID这个属性让我们可以能容易的管理我们的文件。当我们保存GRC流程图按照<filename.grc>的形式时，生出和执行这个流程图会产生另一个输出。GRC是一个图形的交互界面，位于正常的python开发GNU Radio环境之上。ID被用来命名python文件，和grc文件保存在相同的路径。默认情况下ID为top<strong>block，同时将创造一个叫做top</strong>block的文件,为了更好的进行文件管理，我们会改变ID同时改变保存的文件名字。<br>这种GRC-python关联的结果是，GRC实际上就是有python构成的。实际上，模块所有的属性和参数的输入框都可以用python进行解释。这意味着我们可以通过调用python设定属性，例如调用numpy或其他的GNU Radio函数。这种方法通常被用在设计过滤器工具上，创建我们自己的过滤器。<br>另外我们需要注意输入框的不同颜色，他们实际上对应着我们在这个教程中将用到的不同的数据类型。</filename.grc></p>
-<h4 id="2-2-3我的第一个流程图"><a href="#2-2-3我的第一个流程图" class="headerlink" title="2.2.3我的第一个流程图"></a>2.2.3我的第一个流程图</h4><p>既然我们对于寻找模块，添加他们到工作空间，编辑他们的工作属性有一个更深的理解，让我们构建一个流程图，由<strong>Singal Sourse</strong>发送信号到<strong>Throttle Block</strong>（节流装置）然后到我们的<strong>Time Sink</strong>，修改各个模块的属性之后进行连接。<br><img src="https://wiki.gunradio.org/index.php/File:Tutorial_two_1.png" alt=""><br>有了一个能有的流程图，我们现在连讨论一下工具栏。</p>
-<p>对于<strong>throttle block</strong>需要注意一下：在之后的教程中我们会做一个更详细的介绍，现在来说，只需要知道这个模块限制了流程图的数据流向以确保不会占用你CPU100%的资源，保证它不会死机。<br><img src="https://wiki.gnuradio.org/index.php/File:Commandspace.png" alt=""><br>这部分的界面包含了大多数的软件都会有的指令例如：新建，打开，保存，复制，粘贴。到这里我们保存一下我们的工程，流程图命名为tutorial__two.这里重要的功能有<strong>生成流程图</strong>和<strong>执行流程图</strong>和<strong>结束流程进程</strong>分别可通过F5，F6和F7执行。在Help-&gt;Types那里我们稍后会看到的类型对应的颜色映射。</p>
-<h4 id="2-2-4关于生成选项的说明"><a href="#2-2-4关于生成选项的说明" class="headerlink" title="2.2.4关于生成选项的说明"></a>2.2.4关于生成选项的说明</h4><p>让我们点击生成选项，同时看向终端底部的窗口，我们看到他生成了一个和我们<strong>Options Block</strong>中的<strong>ID</strong>同样名字的python文件。终端显示了错误、警告等重要的信息。有两个常见的错误，我们将生成选项的图形工具使用错了。举个例子，如果我们使用WX GUI作为我们的生成选项，但是使用的是一个QT GUI图形，终端会这样显示：<br><img src="https://wiki.gnuradio.org/index.php/File:Wxgen_qtflow.png" alt=""><br>如果我们使用的QT GUI的生成选项，却用了WX GUI图形我们将在终端看到：<br><img src="https://wiki.gnuradio.org/index.php/File:Qtgen_wxflow.png" alt=""><br>需要注意的是我们在未来的版本将去掉WX GUI所以只能使用QT GUI。</p>
-<h4 id="2-2-5检查输出"><a href="#2-2-5检查输出" class="headerlink" title="2.2.5检查输出"></a>2.2.5检查输出</h4><p>我们直接执行我们的流程图，来看一看我们的正弦波形。<br><img src="https://wiki.gnuradio.org/index.php/File:Complex_size.png" alt=""><br>我们应该能得到一个上边的e^jwt形式的正弦函数。现在我们避免复杂信号来保证简单。首先我们想要通过“Kill flowgraph”终止流程图或者关闭“<strong>Time Sink</strong>”GUI。现在我们打开Help-&gt;Types窗口来仔细学习一下数据类型所对应的颜色。<br><img src="https://wiki.gnuradio.org/index.php/File:Types.png" alt=""><br>我们能看到在很多编程语言中常见的数据类型，我们能看到我们是模块（带有蓝色端口）是<strong>Complex Float 32</strong>类型，它们包含真实的或虚拟的<strong>Float 32</strong>类型。我们推测当<strong>Time Sink</strong>输入一个复杂的数据类型，他的输出也会是复杂类型。所以现在让通过进入它的模块属性改变<strong>Singnal Source</strong>（信号源）的输出为浮点数。我们现在感到他的输出部分变成橙色，有一个红色的箭头指向<strong>Throttle Block</strong>，同时在工具栏有一个红色的“-”按键，它意味着流程图存在错误，让我们点击它。<br><img src="https://wiki.gnuradio.org/index.php/File:Size_mismatch.png" alt=""><br>我们看到这个连接的数据类型大小并不匹配，GNU Radio不允许我们将不同的数据类型连接到一起，所以让我们改变我们后面模块的数据类型，我们现在想之前一样生成和运行。<br><img src="https://wiki.gnuradio.org/index.php/File:Tutorial_two_2.png" alt=""><br>我们现在看我们在一个通道中的正弦波形，我们可以通过移动鼠标进行缩放。</p>
+<h3 id="2-1-配置教程"><a href="#2-1-配置教程" class="headerlink" title="2.1 配置教程"></a>2.1 配置教程</h3><p>在我们开始之前，我们需要说明一下我们怎样配置教程2~7。我们在<a href="https://github.com/gnuradio/gnuradio" target="_blank" rel="external">github</a>上包含了我们教程中的所有资料，包括图片，grc文件和模块文件。这样我们能有一个对于这些解决方案的参考。虽然我们可以参考这些文件，但是为了我能得到练习，我们大部分还要创建我们自己的文件。因此我们创建了两个文件夹去存放官方的解决方案和我们自己的文件。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/home/user/gnuradio/tutorials/solutions</div><div class="line">/home/user/gnuradio/tutirials/work</div></pre></td></tr></table></figure></p>
+<h4 id="2-1-1-复制仓库（Repository：git术语）"><a href="#2-1-1-复制仓库（Repository：git术语）" class="headerlink" title="2.1.1 复制仓库（Repository：git术语）"></a>2.1.1 复制仓库（Repository：git术语）</h4><p>首先我们需要复制这个git路径，所以让我们打开终端，移动到之前我们创建的solutions路径下面。我们使用git复制gr-tutorial仓库文件。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git clone https://github.com/gnuradio/gr-tutorial</div></pre></td></tr></table></figure></p>
+<p>git后，我们应该能够看到和github仓库中完全相同的文件和文件夹，如果文件没有丢失，我们可以将这些solutions文件复制到work路径下面。或者如果我们已经知道如何使用python和C++创建OOT模块，我们可以只安装那些定制模块（custom modules）,跟随高级教程继续学习。我们能通过观察完整的流程图，在教程的examples路径下面找到对应的文件。</p>
+<h4 id="2-1-2安装Modules"><a href="#2-1-2安装Modules" class="headerlink" title="2.1.2安装Modules"></a>2.1.2安装Modules</h4><p>在复制的仓库下面，我们能通过运行下面的指令安装solutions<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make -j8</div><div class="line">sudo make install</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
+<p>如果我们想自己完成教程，能通在build路径下面运行<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo make uninstall</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
+<h3 id="2-2-开始了解GRC"><a href="#2-2-开始了解GRC" class="headerlink" title="2.2 开始了解GRC"></a>2.2 开始了解GRC</h3><p>我们已经从教程一了解到，相对于使用硬件去开发，GNU Radio是一种开发无线电的工具软件。在这个教程中，我们从简单的着手，探索如何使用GRC（GNU Radio Companion），GNU Radio的图形化工具用于产生不同的音调，我们应该记住GRC是为了简化我们使用GNU Radio，通过图形创建python文件而不是通过编写代码。<br>GRC界面有四个部分组成，这四个部分分别是：模块库，工具栏，终端和工作区域。<br><img src="https://wiki.gnuradio.org/images/thumb/a/a6/Unity-2d-shell_008.png/600px-Unity-2d-shell_008.png" alt=""><br>这个教程是为了实际操作，所以请从阅读状态中跳出来然后来进行实验，我们将尽可能想指南一样的简单去做这些教程，最好的学习方式就是去尝试他：提出一个问题，思考一个可行的解决方案，然后尝试他。让我们开始使用GRC吧！首先打开终端（ctrl+alt+t 在Ubuntu系统中）然后输入<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> gnuradio-companion</div></pre></td></tr></table></figure></p>
+<p>如果我们不能打开GRC我们需要重新安装GNU Radio。</p>
+<h4 id="2-2-1查找模块"><a href="#2-2-1查找模块" class="headerlink" title="2.2.1查找模块"></a>2.2.1查找模块</h4><p>在GRC模块路径下，模块库包含了不同的模块。第一次查找模块可能看起来有些难。举个例子，如果我们想要生成一个波形，我们应该查找哪个种类的模块呢？我们看到有一个 <strong>波形生成器（Warefrom Generate）</strong> 分类，但如果我们想要显示我们的数据，但是还不确定用什么方式显示会怎么样？我们从教程一知道，这就是我们通常所说的<em>信源（sink）</em>；但是浏览这个列表发现没有“Sink”这个类。解决方案是点击放大镜图标去搜索，或者使用Ctrl+f，然后输入一个能识别所需模块的关键词。如果我们输入“sink”(信源)，我们能够发现所有名字中包含“sink”的模块和每一个模块所在的类别。</p>
+<p><img src="https://wiki.gnuradio.org/images/9/95/Search.png" alt=""></p>
+<p>现在我们添加一个叫做<strong>QT GUI Time Sink</strong>的模块，通过在它的名字上点击同时拖拽它到工作空间</p>
+<h4 id="2-2-2修改模块属性"><a href="#2-2-2修改模块属性" class="headerlink" title="2.2.2修改模块属性"></a>2.2.2修改模块属性</h4><p>这个工作空间包含流程图和各种各样的模块参数，让我们双击<strong>Options Block</strong>去查看它的属性。我们看到窗口如下所示：<br><img src="https://wiki.gnuradio.org/images/thumb/f/ff/Properties_options.png/400px-Properties_options.png" alt=""></p>
+<p>这些模块属性可以被改变以适应不同的工作。让我们删去当前的名字，注意到ID变蓝。这个颜色的变化意味着这个信息已经被编辑，但是还没有被保存。让我们改变<strong>Window Size</strong>这个属性到“300,300”同时点击确定。呀！几乎所有的工作空间都被截断了，使用ctrl+z返回我们在默认尺寸，如果我们退回到<strong>Options Block</strong>属性界面，我们能够发现不同的标签页，其中一个标题叫做文档（documentation）。<br><img src="https://wiki.gnuradio.org/images/thumb/7/71/Id_python.png/400px-Id_python.png" alt=""></p>
+<p>通过上图中框选的部分我们知道，ID实际上被用来作为生成的python文件的名字。<br><img src="https://wiki.gnuradio.org/images/thumb/b/b2/Properties_errors.png/400px-Properties_errors.png" alt=""></p>
+<p>现在我们删去整个ID字符串，注意到在下面出现了一个错误信息，同时注意到ID这个参数现在是红色的，向我们精准展示了那里出现了错误。<br>为了保证结构同意，我们把这个ID改为“tutorial_two_1”。我们也要保证<strong>Grnerate Options</strong>属性选择为“QT GUI”，因为我们使用的是QT GUI漏而不是WX GUI漏，新版本的GUI Radio默认使用的是QT GUI。ID这个属性让我们可以能容易的管理我们的文件。当我们保存GRC流程图按照<filename.grc>的形式时，生出和执行这个流程图会产生另一个输出。GRC是一个图形的交互界面，位于正常的python开发GNU Radio环境之上。ID被用来命名python文件，和grc文件保存在相同的路径。默认情况下ID为top<strong>block，同时将创造一个叫做top</strong>block的文件,为了更好的进行文件管理，我们会改变ID同时改变保存的文件名字。<br>这种GRC-python关联的结果是，GRC实际上就是有python构成的。实际上，模块所有的属性和参数的输入框都可以用python进行解释。这意味着我们可以通过调用python设定属性，例如调用numpy或其他的GNU Radio函数。这种方法通常被用在设计过滤器工具上，创建我们自己的过滤器。<br>另外我们需要注意输入框的不同颜色，他们实际上对应着我们在这个教程中将用到的不同的数据类型。</filename.grc></p>
+<h4 id="2-2-3我的第一个流程图"><a href="#2-2-3我的第一个流程图" class="headerlink" title="2.2.3我的第一个流程图"></a>2.2.3我的第一个流程图</h4><p>既然我们对于寻找模块，添加他们到工作空间，编辑他们的工作属性有一个更深的理解，让我们构建一个流程图，由<strong>Singal Sourse</strong>发送信号到<strong>Throttle Block</strong>（节流装置）然后到我们的<strong>Time Sink</strong>，修改各个模块的属性之后进行连接。<br><img src="https://wiki.gnuradio.org/images/thumb/9/94/Tutorial_two_1.png/600px-Tutorial_two_1.png" alt=""><br>有了一个能有的流程图，我们现在连讨论一下工具栏。</p>
+<p>对于<strong>throttle block</strong>需要注意一下：在之后的教程中我们会做一个更详细的介绍，现在来说，只需要知道这个模块限制了流程图的数据流向以确保不会占用你CPU100%的资源，保证它不会死机。<br><img src="https://wiki.gnuradio.org/images/thumb/4/41/Commandspace.png/600px-Commandspace.png" alt=""><br>这部分的界面包含了大多数的软件都会有的指令例如：新建，打开，保存，复制，粘贴。到这里我们保存一下我们的工程，流程图命名为tutorial__two.这里重要的功能有<strong>生成流程图</strong>和<strong>执行流程图</strong>和<strong>结束流程进程</strong>分别可通过F5，F6和F7执行。在Help-&gt;Types那里我们稍后会看到的类型对应的颜色映射。</p>
+<h4 id="2-2-4关于生成选项的说明"><a href="#2-2-4关于生成选项的说明" class="headerlink" title="2.2.4关于生成选项的说明"></a>2.2.4关于生成选项的说明</h4><p>让我们点击生成选项，同时看向终端底部的窗口，我们看到他生成了一个和我们<strong>Options Block</strong>中的<strong>ID</strong>同样名字的python文件。终端显示了错误、警告等重要的信息。有两个常见的错误，我们将生成选项的图形工具使用错了。举个例子，如果我们使用WX GUI作为我们的生成选项，但是使用的是一个QT GUI图形，终端会这样显示：<br><img src="https://wiki.gnuradio.org/images/thumb/1/1c/Wxgen_qtflow.png/600px-Wxgen_qtflow.png" alt=""><br>如果我们使用的QT GUI的生成选项，却用了WX GUI图形我们将在终端看到：<br><img src="https://wiki.gnuradio.org/images/thumb/3/3f/Qtgen_wxflow.png/600px-Qtgen_wxflow.png" alt=""><br>需要注意的是我们在未来的版本将去掉WX GUI所以只能使用QT GUI。</p>
+<h4 id="2-2-5检查输出"><a href="#2-2-5检查输出" class="headerlink" title="2.2.5检查输出"></a>2.2.5检查输出</h4><p>我们直接执行我们的流程图，来看一看我们的正弦波形。<br><img src="https://wiki.gnuradio.org/images/thumb/f/f8/Complex_sine.png/600px-Complex_sine.png" alt=""><br>我们应该能得到一个上边的e^jwt形式的正弦函数。现在我们避免复杂信号来保证简单。首先我们想要通过“Kill flowgraph”终止流程图或者关闭“<strong>Time Sink</strong>”GUI。现在我们打开Help-&gt;Types窗口来仔细学习一下数据类型所对应的颜色。<br><img src="https://wiki.gnuradio.org/images/thumb/7/7c/Types.png/250px-Types.png" alt=""></p>
+<p>我们能看到在很多编程语言中常见的数据类型，我们能看到我们是模块（带有蓝色端口）是<strong>Complex Float 32</strong>类型，它们包含真实的或虚拟的<strong>Float 32</strong>类型。我们推测当<strong>Time Sink</strong>输入一个复杂的数据类型，他的输出也会是复杂类型。所以现在让通过进入它的模块属性改变<strong>Singnal Source</strong>（信号源）的输出为浮点数。我们现在感到他的输出部分变成橙色，有一个红色的箭头指向<strong>Throttle Block</strong>，同时在工具栏有一个红色的“-”按键，它意味着流程图存在错误，让我们点击它。<br><img src="https://wiki.gnuradio.org/images/thumb/4/43/Size_mismatch.png/600px-Size_mismatch.png" alt=""><br>我们看到这个连接的数据类型大小并不匹配，GNU Radio不允许我们将不同的数据类型连接到一起，所以让我们改变我们后面模块的数据类型，我们现在想之前一样生成和运行。<br><img src="https://wiki.gnuradio.org/images/thumb/2/2e/Tutorial_two_2.png/600px-Tutorial_two_2.png" alt=""><br>我们现在看我们在一个通道中的正弦波形，我们可以通过移动鼠标进行缩放。</p>
 <h3 id="2-3使用组件（Using-the-Companion）"><a href="#2-3使用组件（Using-the-Companion）" class="headerlink" title="2.3使用组件（Using the Companion）"></a>2.3使用组件（Using the Companion）</h3><p>现在我们能够创建我们自己的流程图，我们应该探索GNU Radio有用的功能点，让我们一下面的流程图开始：</p>
-<h4 id="2-3-1时间-amp-频率流程图"><a href="#2-3-1时间-amp-频率流程图" class="headerlink" title="2.3.1时间&amp;频率流程图"></a>2.3.1时间&amp;频率流程图</h4><p><img src="https://wiki.gnuradio.org/index.php/File:Tutorial_two_3.png" alt=""></p>
-<blockquote>
-<p>我们现在创建一个新的流程图，命名ID为“tutorial_two_3”<br>在QT GUI 标签界面中，ID为“tab”，标签页的是数量为2，标签0为“时间”，标签1为“频率”<br>在QT GUI范围界面中，ID为“samp_rate”,默认数值为“5*频率”，起始点位“0.5*频率”，终止点为“20*频率”，单位为“200”<br>在变量中，ID设置为“频率”，值设置为“2K”<br>信号源中，设置频率，并将波形设置为“正弦波”<br>将QT GUI Time Sink设置为标签页0，将QT GUI Frequency Sink设置为标签1<br>在<strong>Throttle</strong>中，将采样频率设置为32K<br>如果验证没有错误，让我们生成然后执行。</p>
-</blockquote>
+<h4 id="2-3-1时间-amp-频率流程图"><a href="#2-3-1时间-amp-频率流程图" class="headerlink" title="2.3.1时间&amp;频率流程图"></a>2.3.1时间&amp;频率流程图</h4><p><img src="https://wiki.gnuradio.org/images/thumb/b/b9/Tutorial_two_3.png/600px-Tutorial_two_3.png" alt=""></p>
+<ul>
+<li>我们现在创建一个新的流程图，命名ID为“tutorial_two_3”</li>
+<li>在QT GUI 标签界面中，ID为“tab”，标签页的是数量为2，标签0为“时间”，标签1为“频率”</li>
+<li>在QT GUI范围界面中，ID为“samp_rate”,默认数值为“5*频率，起始点位“0.5*频率”，终止点为“20*频率”，单位为“200”</li>
+<li>在变量中，ID设置为“频率”，值设置为“2K”</li>
+<li>信号源中，设置频率，并将波形设置为“正弦波”</li>
+<li>将QT GUI Time Sink设置为标签页0，将QT GUI Frequency Sink设置为标签1</li>
+<li>在<strong>Throttle</strong>中，将采样频率设置为32K</li>
+</ul>
+<p>如果验证没有错误，让我们生成然后执行。</p>
 <p>采样频率是一个有意思的东西，对于任何软件无线电平台。请参照<a href="https://wiki.gnuradio.org/index.php/Guided_Tutorial_Extras_Samples_Rates" target="_blank" rel="external">额外的采样频率</a>的界面我们探讨改变采样频率对上面的流程图图像会有什么样的影响。</p>
-<h3 id="2-4如何使用INSERT-BLOCK-NAME-HERE"><a href="#2-4如何使用INSERT-BLOCK-NAME-HERE" class="headerlink" title="2.4如何使用INSERT_BLOCK_NAME_HERE"></a>2.4如何使用INSERT_BLOCK_NAME_HERE</h3><p>有很多方式去显示多个流程图。例如，如果我们有一个大屏幕，我们能够使用[GNURadioCompanion#示例网格方式呈现]在gui hint属性页，或者我们可以使我们的漏（sink）有多个输入。有多个方式去改变模块的变量例如Chooser。使用例如Waterfall sink有不同的方式去显示信号。现在我们有了这个基础，我们可以使用任何模块，看他的文档，理解如何使用它。</p>
-<h4 id="2-4-1-检查探针的号快块"><a href="#2-4-1-检查探针的号快块" class="headerlink" title="2.4.1 检查探针的号快块"></a>2.4.1 检查探针的号快块</h4><p>例如，让我们复习一个邮件列表的问题，如何使用信号探针模块。我们看到它的属性页如下：<br><img src="https://wiki.gnuradio.org/index.php/File:Probe_properties.png" alt=""><br>同时它的文档说明：<br><img src="https://wiki.gnuradio.org/index.php/File:Probe_documentation.png" alt=""><br>首先让我们给这个模块一个ID，就叫做“probe_signal”,同时改变输入信号为“Float”。如果我们看这个文档，这个模块的函数是“level”同时他需要和<strong>Function Probe</strong>模块一起使用，所以让我们拖动一个功能探针（Function Probe）模块，同时看他的属性页。<br><img src="https://wiki.gnuradio.org/index.php/File:Fxn_probe_properties.png" alt=""><br>同时它的文档为：<br><img src="https://wiki.gnuradio.org/index.php/File:Fxn_probe_documentation.png" alt=""><br>首先，我们把他的ID命名为“probe_var”，如果我们看这个文档，这个模块的ID应该是流程图中的另一个模块的ID（。。）<br>在本例中，我们的信号探针是“probe_signal”。同时它也说，函数名应该按照<strong>Probe Signal</strong>类的方法命名。我们通过文档知道，Probe Signal块告诉我们它的函数是“level”所以让我们把他放在工作空间。<strong>Function Args</strong>是传递给函数的参数。回忆上一个文档，这个数式（“level（）”，因此，不需要传递函数。</p>
-<h4 id="2-4-2显示基于文本的信息"><a href="#2-4-2显示基于文本的信息" class="headerlink" title="2.4.2显示基于文本的信息"></a>2.4.2显示基于文本的信息</h4><p>如果我们运行这个流程图，我们注意到什么也没有发生，所以我们需要去显示这个数据。在本例中我们不能使用sink了，因为<strong>Probe Signal</strong>已经是一个sink（漏）了。我们搜索“Qt”，可以看到可用的用于显示的模块。<br><img src="https://wiki.gnuradio.org/index.php/File:Probe_search.png" alt=""><br>我们可以看到有一串的Sink，同样也是在本例中不能使用的。但是留有一个有6个选项的GUI窗口部件。但是感觉有四个选项是输入，同时我们也不会太深入的理解（但是我们能够记住实验的话，我们能够使用它）。如果我们简单的修改功能探针<strong>Function Probe</strong>的默认ID为“probe_var”，结果如下：<br><img src="https://wiki.gnuradio.org/index.php/File:Tutorial_two_5.png" alt=""></p>
-<h4 id="2-4-3关于节流模块-Throttle-Block-的一个注意事项"><a href="#2-4-3关于节流模块-Throttle-Block-的一个注意事项" class="headerlink" title="2.4.3关于节流模块(Throttle Block)的一个注意事项"></a>2.4.3关于节流模块(Throttle Block)的一个注意事项</h4><p>在我们深入之前，我们需要探讨一下在我们所有的流程图中的节流模块，下面是系统监视器的一组关于运行正弦对比，一组使用节流模块，一组没有使用节流模块。<br><img src="https://wiki.gnuradio.org/index.php/File:Throttle.png" alt=""><br>正如我们看到的，不使用节流模块 ，CPU几乎在全速运行。当不连接硬件时，我们通常使用节流模块。即使我们使用的是复合流程图，我们也只需要一个节流模块。我们可以认为节流模块就是速度限制；更高的节流比率，我们的流程图运行的越快，同样的节流比率越低我们的流程图运行的越慢。如果我们改变了节流器的采样比率，改成10^6的话，我们再次打开系统监视器，我们可以看到CPU的占有率比48*10^3更高了。另一方面，硬件对吞吐量加以限制所以不需要节流模块。在连接硬件的时候我们从来不使用节流模块。</p>
-<blockquote>
-<p>if hardware<br>  do_not_use_throttle<br>else<br>  use_one_throttle</p>
-</blockquote>
-<h4 id="2-4-4采样频率的错配"><a href="#2-4-4采样频率的错配" class="headerlink" title="2.4.4采样频率的错配"></a>2.4.4采样频率的错配</h4><p>现在我们已经介绍了需要一定采样频率才能正常工作的硬件，我们仔细观察一下这个关于采样频率错配的例子，让我们构建下面的流程图。<br><img src="https://wiki.gnuradio.org/index.php/File:Tutorial_two_6.png" alt=""></p>
+<h3 id="2-4如何使用INSERT-BLOCK-NAME-HERE"><a href="#2-4如何使用INSERT-BLOCK-NAME-HERE" class="headerlink" title="2.4如何使用INSERT_BLOCK_NAME_HERE"></a>2.4如何使用INSERT_BLOCK_NAME_HERE</h3><p>有很多方式去显示多个流程图。例如，如果我们有一个大屏幕，我们能够使用[GNURadioCompanion#示例网格方式呈现]在gui hint属性页，或者我们可以使我们的信源（sink）有多个输入。有多个方式去改变模块的变量例如Chooser。使用例如Waterfall sink有不同的方式去显示信号。现在我们有了这个基础，我们可以使用任何模块，看他的文档，理解如何使用它。</p>
+<h4 id="2-4-1-检查探针的号快块"><a href="#2-4-1-检查探针的号快块" class="headerlink" title="2.4.1 检查探针的号快块"></a>2.4.1 检查探针的号快块</h4><p>例如，让我们复习一个邮件列表的问题，如何使用信号探针模块。我们看到它的属性页如下：</p>
+<p><img src="https://wiki.gnuradio.org/images/thumb/6/6f/Probe_properties.png/400px-Probe_properties.png" alt=""></p>
+<p>同时它的文档说明：</p>
+<p><img src="https://wiki.gnuradio.org/images/thumb/2/20/Probe_documentation.png/400px-Probe_documentation.png" alt=""></p>
+<p>首先让我们给这个模块一个ID，就叫做“probe_signal”,同时改变输入信号为“Float”。如果我们看这个文档，这个模块的函数是“level”同时他需要和<strong>Function Probe</strong>模块一起使用，所以让我们拖动一个功能探针（Function Probe）模块，同时看他的属性页。<br><img src="https://wiki.gnuradio.org/images/thumb/b/b1/Fxn_probe_properties.png/400px-Fxn_probe_properties.png" alt=""></p>
+<p>同时它的文档为：</p>
+<p><img src="https://wiki.gnuradio.org/images/thumb/d/dd/Fxn_probe_documentation.png/400px-Fxn_probe_documentation.png" alt=""></p>
+<p>首先，我们把他的ID命名为“probe_var”，如果我们看这个文档，这个模块的ID应该是流程图中的另一个模块的ID（。。）<br>在本例中，我们的信号探针是“probe_signal”。同时它也说，函数名应该按照<strong>Probe Signal</strong>类的方法命名。我们通过文档知道，Probe Signal块告诉我们它的函数是“level”所以让我们把他放在工作空间。<strong>Function Args</strong>是传递给函数的参数。回忆上一个文档，这个函数“level()”，因此，不需要传递函数。</p>
+<h4 id="2-4-2显示基于文本的信息"><a href="#2-4-2显示基于文本的信息" class="headerlink" title="2.4.2显示基于文本的信息"></a>2.4.2显示基于文本的信息</h4><p>如果我们运行这个流程图，我们注意到什么也没有发生，所以我们需要去显示这个数据。在本例中我们不能使用sink了，因为<strong>Probe Signal</strong>已经是一个sink（漏）了。我们搜索“Qt”，可以看到可用的用于显示的模块。</p>
+<p><img src="https://wiki.gnuradio.org/images/1/18/Probe_search.png" alt=""></p>
+<p>我们可以看到有一串的Sink，同样也是在本例中不能使用的。但是留有一个有6个选项的GUI窗口部件。但是感觉有四个选项是输入，同时我们也不会太深入的理解（但是我们能够记住实验的话，我们能够使用它）。如果我们简单的修改功能探针<strong>Function Probe</strong>的默认ID为“probe_var”，结果如下：</p>
+<p><img src="https://wiki.gnuradio.org/images/0/03/Tutorial_two_5.png" alt=""></p>
+<h4 id="2-4-3关于节流模块-Throttle-Block-的一个注意事项"><a href="#2-4-3关于节流模块-Throttle-Block-的一个注意事项" class="headerlink" title="2.4.3关于节流模块(Throttle Block)的一个注意事项"></a>2.4.3关于节流模块(Throttle Block)的一个注意事项</h4><p>在我们深入之前，我们需要探讨一下在我们所有的流程图中的节流模块，下面是系统监视器的一组关于运行正弦对比，一组使用节流模块，一组没有使用节流模块。</p>
+<p><img src="https://wiki.gnuradio.org/images/thumb/6/63/Throttle.png/600px-Throttle.png" alt=""></p>
+<p>正如我们看到的，不使用节流模块 ，CPU几乎在全速运行。当不连接硬件时，我们通常使用节流模块。即使我们使用的是复合流程图，我们也只需要一个节流模块。我们可以认为节流模块就是速度限制；更高的节流比率，我们的流程图运行的越快，同样的节流比率越低我们的流程图运行的越慢。如果我们改变了节流器的采样比率，改成10^6的话，我们再次打开系统监视器，我们可以看到CPU的占有率比48*10^3更高了。另一方面，硬件对吞吐量加以限制所以不需要节流模块。在连接硬件的时候我们从来不使用节流模块。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">if hardware</div><div class="line">  do_not_use_throttle</div><div class="line">else</div><div class="line">  use_one_throttle</div></pre></td></tr></table></figure></p>
+<h4 id="2-4-4采样频率的错配"><a href="#2-4-4采样频率的错配" class="headerlink" title="2.4.4采样频率的错配"></a>2.4.4采样频率的错配</h4><p>现在我们已经介绍了需要一定采样频率才能正常工作的硬件，我们仔细观察一下这个关于采样频率错配的例子，让我们构建下面的流程图。</p>
+<p><img src="https://wiki.gnuradio.org/images/thumb/c/cd/Tutorial_two_6.png/600px-Tutorial_two_6.png" alt=""></p>
 <ul>
 <li>配置选择器以允许对信号的采样率有三个不同的值。尽管图中的第三个值为16kHZ，我们以160kHz代替。</li>
 <li>所有信号源的采样频率都设为”<strong>samp_rate</strong>“</li>
 <li>audio_rate设定为“48000”</li>
-<li>所有的sink的采样都设为”audio_rate”<br>我们能够看到这没有使用节流模块，我们也注意到我们将无线电采样频率作为变量，尽管流程图在运行的时候它不改变。这是因为xml文件没有适当的回调来支持它。（关于回调将在教程3作更多的介绍）<br>如果我们以采样频率48000运行流程图，我们能够听到类似电话铃声的声音。能够看到傅里叶变换的确实是在440Hz和350Hz<br><img src="https://wiki.gnuradio.org/index.php/File:Sampling_mismatch.png" alt=""><br>如果声卡接收到更高或者更低的频率，都将不会有拨号音。</li>
+<li>所有的sink的采样都设为”audio_rate”</li>
 </ul>
+<p>我们能够看到这没有使用节流模块，我们也注意到我们将无线电采样频率作为变量，尽管流程图在运行的时候它不改变。这是因为xml文件没有适当的回调来支持它。（关于回调将在教程3作更多的介绍）<br>如果我们以采样频率48000运行流程图，我们能够听到类似电话铃声的声音。能够看到傅里叶变换的确实是在440Hz和350Hz</p>
+<p><img src="https://wiki.gnuradio.org/images/thumb/d/d1/Sampling_mismatch.png/600px-Sampling_mismatch.png" alt=""></p>
+<p>如果声卡接收到更高或者更低的频率，都将不会有拨号音。</p>
 <h3 id="2-5总结"><a href="#2-5总结" class="headerlink" title="2.5总结"></a>2.5总结</h3><p>这就是现在的GRC，让我们进入python教程之前了解一下你的想法。</p>
 <h4 id="2-5-1一些我们现在的问题"><a href="#2-5-1一些我们现在的问题" class="headerlink" title="2.5.1一些我们现在的问题"></a>2.5.1一些我们现在的问题</h4><ol>
 <li>如果放了一个信号源和Abs模块在一个画布上，将他们连接在一起什么都不改变，将发生错误。<br> 1a. 我们怎么知道有一个错误？<br> 1b. 我们如何发现错误是什么？<br> 1c. 我们如何改正这个错误？</li>
