@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="GNU Radio,GRC,翻译," />
+  <meta name="keywords" content="GNU Radio,翻译,GRC," />
 
 
 
@@ -96,7 +96,7 @@
 
 
 <meta name="description" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始">
-<meta name="keywords" content="GNU Radio,GRC,翻译">
+<meta name="keywords" content="GNU Radio,翻译,GRC">
 <meta property="og:type" content="article">
 <meta property="og:title" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程">
 <meta property="og:url" content="http://yoursite.com/2017/10/18/Guided Tutorial GRC翻译/index.html">
@@ -126,7 +126,7 @@
 <meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/6/63/Throttle.png/600px-Throttle.png">
 <meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/c/cd/Tutorial_two_6.png/600px-Tutorial_two_6.png">
 <meta property="og:image" content="https://wiki.gnuradio.org/images/thumb/d/d1/Sampling_mismatch.png/600px-Sampling_mismatch.png">
-<meta property="og:updated_time" content="2017-10-31T09:32:38.125Z">
+<meta property="og:updated_time" content="2017-10-31T09:32:38.124Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程">
 <meta name="twitter:description" content="翻译GNU Radio教程(2)：GNU Radio下的GRC编程原文地址目标： 使用标准的模块（block）库创建流程图 学习如何使用仪表化的模块调试流程图 学习如何在GNU Radio中如何采样和节流工作（throttle works） 学习如何使用文档去理解模块的api函数  预备知识 学会使用git的基本操作 GNU Radio 3.7.4或之后的版本 教程1  2.1 配置教程在我们开始">
@@ -362,11 +362,11 @@
 <li><a href="https://wiki.gnuradio.marorg/index.php/Guided_Touria_Introduction" target="_blank" rel="external">教程1</a></li>
 </ol>
 <h3 id="2-1-配置教程"><a href="#2-1-配置教程" class="headerlink" title="2.1 配置教程"></a>2.1 配置教程</h3><p>在我们开始之前，我们需要说明一下我们怎样配置教程2~7。我们在<a href="https://github.com/gnuradio/gnuradio" target="_blank" rel="external">github</a>上包含了我们教程中的所有资料，包括图片，grc文件和模块文件。这样我们能有一个对于这些解决方案的参考。虽然我们可以参考这些文件，但是为了我能得到练习，我们大部分还要创建我们自己的文件。因此我们创建了两个文件夹去存放官方的解决方案和我们自己的文件。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/home/user/gnuradio/tutorials/solutions</div><div class="line">/home/user/gnuradio/tutirials/work</div></pre></td></tr></table></figure></p>
-<h4 id="2-1-1-复制仓库（Repository：git术语）"><a href="#2-1-1-复制仓库（Repository：git术语）" class="headerlink" title="2.1.1 复制仓库（Repository：git术语）"></a>2.1.1 复制仓库（Repository：git术语）</h4><p>首先我们需要复制这个git路径，所以让我们打开终端，移动到之前我们创建的solutions路径下面。我们使用git复制gr-tutorial仓库文件。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> git clone https://github.com/gnuradio/gr-tutorial</div></pre></td></tr></table></figure></p>
+<h4 id="2-1-1-复制仓库（Repository：git术语）"><a href="#2-1-1-复制仓库（Repository：git术语）" class="headerlink" title="2.1.1 复制仓库（Repository：git术语）"></a>2.1.1 复制仓库（Repository：git术语）</h4><p>首先我们需要复制这个git路径，所以让我们打开终端，移动到之前我们创建的solutions路径下面。我们使用git复制gr-tutorial仓库文件。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> https://github.com/gnuradio/gr-tutorial</span></div></pre></td></tr></table></figure></p>
 <p>git后，我们应该能够看到和github仓库中完全相同的文件和文件夹，如果文件没有丢失，我们可以将这些solutions文件复制到work路径下面。或者如果我们已经知道如何使用python和C++创建OOT模块，我们可以只安装那些定制模块（custom modules）,跟随高级教程继续学习。我们能通过观察完整的流程图，在教程的examples路径下面找到对应的文件。</p>
 <h4 id="2-1-2安装Modules"><a href="#2-1-2安装Modules" class="headerlink" title="2.1.2安装Modules"></a>2.1.2安装Modules</h4><p>在复制的仓库下面，我们能通过运行下面的指令安装solutions<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">mkdir build</div><div class="line">cd build</div><div class="line">cmake ..</div><div class="line">make -j8</div><div class="line">sudo make install</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
 <p>如果我们想自己完成教程，能通在build路径下面运行<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo make uninstall</div><div class="line">sudo ldconfig</div></pre></td></tr></table></figure></p>
-<h3 id="2-2-开始了解GRC"><a href="#2-2-开始了解GRC" class="headerlink" title="2.2 开始了解GRC"></a>2.2 开始了解GRC</h3><p>我们已经从教程一了解到，相对于使用硬件去开发，GNU Radio是一种开发无线电的工具软件。在这个教程中，我们从简单的着手，探索如何使用GRC（GNU Radio Companion），GNU Radio的图形化工具用于产生不同的音调，我们应该记住GRC是为了简化我们使用GNU Radio，通过图形创建python文件而不是通过编写代码。<br>GRC界面有四个部分组成，这四个部分分别是：模块库，工具栏，终端和工作区域。<br><img src="https://wiki.gnuradio.org/images/thumb/a/a6/Unity-2d-shell_008.png/600px-Unity-2d-shell_008.png" alt=""><br>这个教程是为了实际操作，所以请从阅读状态中跳出来然后来进行实验，我们将尽可能想指南一样的简单去做这些教程，最好的学习方式就是去尝试他：提出一个问题，思考一个可行的解决方案，然后尝试他。让我们开始使用GRC吧！首先打开终端（ctrl+alt+t 在Ubuntu系统中）然后输入<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span> gnuradio-companion</div></pre></td></tr></table></figure></p>
+<h3 id="2-2-开始了解GRC"><a href="#2-2-开始了解GRC" class="headerlink" title="2.2 开始了解GRC"></a>2.2 开始了解GRC</h3><p>我们已经从教程一了解到，相对于使用硬件去开发，GNU Radio是一种开发无线电的工具软件。在这个教程中，我们从简单的着手，探索如何使用GRC（GNU Radio Companion），GNU Radio的图形化工具用于产生不同的音调，我们应该记住GRC是为了简化我们使用GNU Radio，通过图形创建python文件而不是通过编写代码。<br>GRC界面有四个部分组成，这四个部分分别是：模块库，工具栏，终端和工作区域。<br><img src="https://wiki.gnuradio.org/images/thumb/a/a6/Unity-2d-shell_008.png/600px-Unity-2d-shell_008.png" alt=""><br>这个教程是为了实际操作，所以请从阅读状态中跳出来然后来进行实验，我们将尽可能想指南一样的简单去做这些教程，最好的学习方式就是去尝试他：提出一个问题，思考一个可行的解决方案，然后尝试他。让我们开始使用GRC吧！首先打开终端（ctrl+alt+t 在Ubuntu系统中）然后输入<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> gnuradio-companion</span></div></pre></td></tr></table></figure></p>
 <p>如果我们不能打开GRC我们需要重新安装GNU Radio。</p>
 <h4 id="2-2-1查找模块"><a href="#2-2-1查找模块" class="headerlink" title="2.2.1查找模块"></a>2.2.1查找模块</h4><p>在GRC模块路径下，模块库包含了不同的模块。第一次查找模块可能看起来有些难。举个例子，如果我们想要生成一个波形，我们应该查找哪个种类的模块呢？我们看到有一个 <strong>波形生成器（Warefrom Generate）</strong> 分类，但如果我们想要显示我们的数据，但是还不确定用什么方式显示会怎么样？我们从教程一知道，这就是我们通常所说的<em>信源（sink）</em>；但是浏览这个列表发现没有“Sink”这个类。解决方案是点击放大镜图标去搜索，或者使用Ctrl+f，然后输入一个能识别所需模块的关键词。如果我们输入“sink”(信源)，我们能够发现所有名字中包含“sink”的模块和每一个模块所在的类别。</p>
 <p><img src="https://wiki.gnuradio.org/images/9/95/Search.png" alt=""></p>
@@ -478,9 +478,9 @@
           
             <a href="/tags/GNU-Radio/" rel="tag"># GNU Radio</a>
           
-            <a href="/tags/GRC/" rel="tag"># GRC</a>
-          
             <a href="/tags/翻译/" rel="tag"># 翻译</a>
+          
+            <a href="/tags/GRC/" rel="tag"># GRC</a>
           
         </div>
       
@@ -682,7 +682,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
