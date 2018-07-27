@@ -95,19 +95,19 @@
 
 
 
-<meta name="description" content="Leetcode笔记：5.最长回文子串问题描述给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。 例如：输入ababd,输出未bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb 解法分析暴力法1234567891011121314151617181920212223242526class Solutio">
+<meta name="description" content="Leetcode笔记：5.最长回文子串问题描述给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。 例如：输入ababd,输出为bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb。 解法分析暴力法1234567891011121314151617181920212223242526class Soluti">
 <meta name="keywords" content="C++,Leetcode">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Leetcode笔记：5.最长回文子串">
 <meta property="og:url" content="http://yoursite.com/2018/07/05/20180705/index.html">
 <meta property="og:site_name" content="INGslh&#39;s blog">
-<meta property="og:description" content="Leetcode笔记：5.最长回文子串问题描述给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。 例如：输入ababd,输出未bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb 解法分析暴力法1234567891011121314151617181920212223242526class Solutio">
+<meta property="og:description" content="Leetcode笔记：5.最长回文子串问题描述给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。 例如：输入ababd,输出为bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb。 解法分析暴力法1234567891011121314151617181920212223242526class Soluti">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://7xpp29.com1.z0.glb.clouddn.com/%E8%B6%85%E6%97%B6%E9%99%90.png">
-<meta property="og:updated_time" content="2018-07-09T12:15:01.103Z">
+<meta property="og:updated_time" content="2018-07-09T12:16:48.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode笔记：5.最长回文子串">
-<meta name="twitter:description" content="Leetcode笔记：5.最长回文子串问题描述给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。 例如：输入ababd,输出未bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb 解法分析暴力法1234567891011121314151617181920212223242526class Solutio">
+<meta name="twitter:description" content="Leetcode笔记：5.最长回文子串问题描述给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，比如“level”或者“noon”等等就是回文串。 例如：输入ababd,输出为bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb。 解法分析暴力法1234567891011121314151617181920212223242526class Soluti">
 <meta name="twitter:image" content="http://7xpp29.com1.z0.glb.clouddn.com/%E8%B6%85%E6%97%B6%E9%99%90.png">
 
 
@@ -329,7 +329,7 @@
 
       
         <h1 id="Leetcode笔记：5-最长回文子串"><a href="#Leetcode笔记：5-最长回文子串" class="headerlink" title="Leetcode笔记：5.最长回文子串"></a>Leetcode笔记：5.最长回文子串</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>给定一个字符串，求它的最长回文子串。“回文串”是一个正读和反读都一样的字符串，<br>比如“level”或者“noon”等等就是回文串。</p>
-<p>例如：输入ababd,输出未bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb</p>
+<p>例如：输入ababd,输出为bab,当然aba也是一个合法的回文子串。输入cbbd,那么输出bb。</p>
 <h2 id="解法分析"><a href="#解法分析" class="headerlink" title="解法分析"></a>解法分析</h2><h4 id="暴力法"><a href="#暴力法" class="headerlink" title="暴力法"></a>暴力法</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></div><div class="line"><span class="keyword">public</span>:</div><div class="line">    <span class="function"><span class="built_in">string</span> <span class="title">longestPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</div><div class="line">        <span class="keyword">bool</span> ret = <span class="literal">true</span>;</div><div class="line">        <span class="built_in">string</span> temp;</div><div class="line">        <span class="built_in">string</span> output = s.substr(<span class="number">0</span>,<span class="number">1</span>);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; s.size(); ++i)&#123;</div><div class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j= s.size()<span class="number">-1</span>; j &gt; i ;--j)&#123;</div><div class="line">                temp = s.substr(i,j - i +<span class="number">1</span>);</div><div class="line">                <span class="comment">//检验是否为回文</span></div><div class="line">                ret = <span class="literal">true</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> m = <span class="number">0</span> ,n = temp.size()<span class="number">-1</span>; m &lt; n; ++m,--n)&#123;</div><div class="line">                    <span class="keyword">if</span>(temp[m] != temp[n])&#123;</div><div class="line">                        ret = <span class="literal">false</span>;    </div><div class="line">                        <span class="keyword">break</span>;</div><div class="line">                    &#125;        </div><div class="line">                &#125;               </div><div class="line"></div><div class="line">                <span class="keyword">if</span>(ret == <span class="literal">true</span> &amp;&amp; output.size()&lt;temp.size()) </div><div class="line">                    output = temp ;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> output;</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>该方式三次循环嵌套，时间复杂度为O(n^3),第一次提交就是按照这种方法，结果提示 :(</p>
 <p><img src="http://7xpp29.com1.z0.glb.clouddn.com/%E8%B6%85%E6%97%B6%E9%99%90.png" alt=""></p>
@@ -412,6 +412,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/07/27/20180727/" rel="prev" title="Leetcode笔记：10.正则表达式匹配">
+                Leetcode笔记：10.正则表达式匹配 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -490,7 +494,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
